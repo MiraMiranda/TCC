@@ -6,23 +6,28 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+}
+
 header {
     display: flex;
-    justify-content: space-between; /* Logo à esquerda e nav à direita */
-    align-items: center; /* Centraliza verticalmente os itens */
-    padding: 0 20px; /* Pequeno espaçamento nas laterais do header */
-    height: 100px; /* Altura do header */
-    background-color: #f4f4f4; /* Cor de fundo do header */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100px;
+    background-color: #f4f4f4;
     border: 2px solid black;
 }
 
 .logo img {
-    max-height: 80px; /* Tamanho da logo */
+    max-height: 80px;
 }
 
 nav {
     display: flex;
-    gap: 20px; /* Espaçamento entre os links do nav */
+    gap: 20px;
 }
 
 nav a {
@@ -37,44 +42,45 @@ nav a:hover {
 }
 
 .banner {
-    max-width: 1200px; /* Largura máxima do banner */
-    margin: 20px auto 100px; /* Espaço acima e abaixo do banner e centraliza */
-    padding: 0 20px; /* Espaço nas laterais do banner */
+    width: 100%;
+    margin: 40px 0px;
+    padding: 0;
 }
 
 .banner img {
-    width: 100%; /* A imagem ocupa 100% do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove o espaço abaixo da imagem */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .container_conteudo {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cria um grid responsivo */
-    gap: 20px; /* Espaçamento entre os itens do grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
     font-size: 18px;
-    padding: 20px; /* Espaçamento interno da seção */
+    padding: 20px;
+    max-width: 1200px; /* Define uma largura máxima para a seção */
+    margin: 0 auto; /* Centraliza a seção na tela */
 }
 
 .conteudo {
     background-color: transparent;
-    border: 2px solid black;
     display: flex;
-    flex-direction: column; /* Alinha os itens verticalmente */
-    padding: 0; /* Remove o padding interno */
+    flex-direction: column;
+    padding: 0;
 }
 
 .legenda-top {
-    display: flex; /* Usar flexbox para alinhar itens */
-    flex-direction: column; /* Alinha os itens em uma coluna */
-    align-items: flex-start; /* Alinha os itens à esquerda */
-    padding: 10px; /* Espaço interno ao redor dos elementos */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
     background-color: rgb(207, 207, 207);
 }
 
 .legenda-top a,
 .legenda-top .tempo {
-    margin-bottom: 5px; /* Espaço entre os elementos */
+    margin-bottom: 5px;
 }
 
 .legenda-top a {
@@ -100,9 +106,9 @@ nav a:hover {
 }
 
 .legenda-bottom {
-    display: flex; /* Usar flexbox para alinhar itens */
-    justify-content: left; /* Alinha os itens em uma coluna */
-    padding: 5px; /* Espaço interno ao redor dos elementos */
+    display: flex;
+    justify-content: left;
+    padding: 5px;
     background-color: rgb(207, 207, 207);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
@@ -122,8 +128,147 @@ nav a:hover {
     margin-top: 30px;
     padding: 10px;
     font-family:"Raleway", sans-serif ;
-    color: rgb(71, 71, 71);
+    color: rgb(146, 146, 146);
     align-items: center;
     justify-content: center;
     font-size: 0.90em;
 }
+
+
+.carousel-container {
+    position: relative;
+    width: 800px;
+    margin: 50px auto; /* Centraliza o bloco */
+    border: 2px solid #ddd;
+}
+
+.carousel-image {
+    display: none; /* Esconde todas as imagens por padrão */
+    width: 100%;
+}
+
+.carousel-image img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+    height: auto;
+}
+
+.carousel-image.active {
+    display: block; /* Mostra a imagem ativa */
+}
+
+.carousel-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-navigation button {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.carousel-navigation button:hover {
+    background-color: #ddd;
+}
+
+.carousel-navigation button:focus {
+    background-color: #007BFF;
+    color: white;
+}
+
+.container-conteudo2 {
+    display: flex; /* Torna a section um contêiner flexível */
+    justify-content: space-between; /* Espaça as divs com espaço entre elas */
+    gap: 20px; /* Espaço entre os blocos */
+    flex-wrap: wrap; /* Faz com que as divs quebrem linha em telas menores */
+    padding: 20px; /* Espaçamento interno da section */
+}
+
+.conteudo-bloco {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: calc(45% - 1px); /* Define largura de 50%, menos o espaçamento */
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura */
+
+}
+
+.imagem-cont2 {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do bloco */
+    height: auto;
+}
+
+.legenda-conteudo2 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.rodape{
+    background-color: #f4f4f4;
+    height: 100px;
+    border: 2px solid black;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .container_conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        margin: 20px 0;
+    }
+
+    .conteudo img {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .previa {
+        font-size: 0.85em;
+    }
+
+    .titulo h1 {
+        font-size: 1.2em;
+    }
+
+    .conteudo {
+        padding: 5px;
+    }
+}
+
+
