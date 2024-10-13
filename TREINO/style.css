@@ -1,7 +1,7 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
@@ -13,26 +13,26 @@ header {
     padding: 0 20px; /* Pequeno espaçamento nas laterais do header */
     height: 100px; /* Altura do header */
     background-color: #f4f4f4; /* Cor de fundo do header */
-    border: 2px solid  black;
-  }
-  
-  .logo img {
+    border: 2px solid black;
+}
+
+.logo img {
     max-height: 80px; /* Tamanho da logo */
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
     gap: 20px; /* Espaçamento entre os links do nav */
-  }
-  
-  nav a {
+}
+
+nav a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
     padding: 10px;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     color: #007BFF;
 }
 
@@ -40,23 +40,29 @@ header {
     max-width: 1200px; /* Largura máxima do banner */
     margin: 20px auto 100px; /* Espaço acima e abaixo do banner e centraliza */
     padding: 0 20px; /* Espaço nas laterais do banner */
-  }
-  
+}
+
 .banner img {
     width: 100%; /* A imagem ocupa 100% do contêiner */
     height: auto; /* Mantém a proporção da imagem */
     display: block; /* Remove o espaço abaixo da imagem */
 }
 
-
-.container_conteudo{
-    display: flex;
+.container_conteudo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cria um grid responsivo */
+    gap: 20px; /* Espaçamento entre os itens do grid */
     font-size: 18px;
-    justify-content: space-around;
-    align-items: center;
-    background-color: transparent;
+    padding: 20px; /* Espaçamento interno da seção */
 }
 
+.conteudo {
+    background-color: transparent;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    padding: 0; /* Remove o padding interno */
+}
 
 .legenda-top {
     display: flex; /* Usar flexbox para alinhar itens */
@@ -71,40 +77,29 @@ header {
     margin-bottom: 5px; /* Espaço entre os elementos */
 }
 
-.legenda-top a{
+.legenda-top a {
     font-family: "Raleway", sans-serif;
     text-decoration: none;
     color: black;
 }
 
-.legenda-top a:hover{
+.legenda-top a:hover {
     color: white;
 }
 
-.tempo{
+.tempo {
     font-family: "Raleway", sans-serif;
     font-size: 0.60em;
 }
 
-
-.conteudo{
-    max-width: 430px;
-    margin: 20px auto;
-    padding: 0;
-    background-color: transparent;
-
-
-
-}
-
-.conteudo img{
+.conteudo img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     display: block;
-
 }
 
-.legenda{
+.legenda-bottom {
     display: flex; /* Usar flexbox para alinhar itens */
     justify-content: left; /* Alinha os itens em uma coluna */
     padding: 5px; /* Espaço interno ao redor dos elementos */
@@ -112,14 +107,23 @@ header {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.legenda nav a{
+.legenda-bottom nav a {
     font-size: 0.78em;
 }
 
-.titulo{
+.titulo {
+    font-family: "Raleway", "Roboto", sans-serif;
     margin-top: 15px;
-    background-color: yellow;
+    text-align: center;
 }
 
-
-
+.previa {
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 10px;
+    font-family:"Raleway", sans-serif ;
+    color: rgb(71, 71, 71);
+    align-items: center;
+    justify-content: center;
+    font-size: 0.90em;
+}
