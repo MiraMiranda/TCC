@@ -17,7 +17,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    height: 90px;
+    height: 90px; /* Ajuste se necessário */
     background-color: #1b2727;
     position: fixed; /* Fixa o cabeçalho no topo */
     top: 0; /* Coloca o cabeçalho no topo */
@@ -58,6 +58,13 @@ header {
     padding: 20px;
 }
 
+/* Adicione a media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .container_titulo-conteudo {
+        margin-top: 120px; /* Aumente a margem superior para dispositivos móveis */
+    }
+}
+
 .titulo-cabeçalho {
     padding: 20px 30px;
     color: white;
@@ -71,7 +78,7 @@ header {
     font-size: 14px;
 }
 
-.previa{
+.previa {
     width: 100%;
     padding: 10px 30px;
     font-size: 20px;
@@ -96,7 +103,6 @@ header {
     margin-left: 50px;
     height: auto; /* Altura inicial automática */
     max-height: 300px; /* Altura máxima de 400px */
-
 }
 
 .conteudo {
@@ -110,14 +116,6 @@ header {
     height: auto;
     margin-bottom: 35px;
     margin-top: 20px;
-}
-
-.legenda-imagem {
-    text-align: left; /* Alinha o texto à direita */
-    margin-top: -30px; /* Reduz a margem superior para aproximar da imagem */
-    margin-bottom: 40px; /* Ajuste a margem inferior conforme necessário */
-    font-size: 14px; /* Ajuste o tamanho da fonte se necessário */
-    color: #555; /* Defina uma cor que combine com o layout */
 }
 
 .titulo-referencias {
@@ -157,8 +155,13 @@ header {
     margin-bottom: 10px;
 }
 
-
-/* Estilos gerais já definidos aqui... */
+.legenda-imagem {
+    text-align: right; /* Alinha o texto à direita */
+    margin-top: -10px; /* Reduz a margem superior para aproximar da imagem */
+    margin-bottom: 20px; /* Ajuste a margem inferior conforme necessário */
+    font-size: 14px; /* Ajuste o tamanho da fonte se necessário */
+    color: #555; /* Defina uma cor que combine com o layout */
+}
 
 /* Estilos para telas pequenas (mobile) */
 @media (max-width: 768px) {
@@ -178,14 +181,10 @@ header {
         gap: 10px; /* Reduz o espaço entre opções */
     }
 
-    .container_titulo-conteudo {
-        padding: 10px; /* Ajusta o padding */
-    }
-
     .titulo-cabeçalho,
     .tempo,
     .previa {
-        padding: 10px; /* Ajusta o padding dos textos */
+        padding: 10px; /* Ajusta o padding */
         font-size: 16px; /* Ajusta o tamanho da fonte */
     }
 
@@ -248,4 +247,3 @@ header {
         max-width: 700px; /* Mantém a largura máxima do conteúdo */
     }
 }
-
