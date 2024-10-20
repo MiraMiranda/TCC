@@ -61,7 +61,7 @@ header {
 /* Media query para dispositivos móveis */
 @media (max-width: 768px) {
     .container_titulo-conteudo {
-        margin-top: 130px; /* Aumente a margem superior para dispositivos móveis */
+        margin-top: 90px; /* Aumente a margem superior para dispositivos móveis */
     }
 }
 
@@ -177,7 +177,9 @@ header {
     }
 
     .opcoes-header {
-        flex-direction: column; /* Alinha as opções em coluna */
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row; /* Alinha as opções em coluna */
         gap: 10px; /* Reduz o espaço entre opções */
     }
 
