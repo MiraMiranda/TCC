@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 90px;
+    background-color: #1b2727;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0; /* Coloca o cabeçalho no topo */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.logo img {
+    max-height: 80px;
+    color: #d1d1d1;
+}
+
+.opcoes-header {
+    display: flex;
+    gap: 20px;
+}
+
+.opcoes {
+    text-decoration: none;
+    color: #d1d1d1;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.opcoes:hover {
+    color: #6b8e4e;
+}
+
+.container_titulo-conteudo {
+    background-color: #214430;
+    margin-top: 90px; /* Adicione um espaçamento para compensar o header fixo */
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column; /* Coloca os itens em uma coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    padding: 20px;
+}
+
+.titulo {
+    padding: 20px 30px;
+    color: white;
+    font-size: 20px;
+    width: 100%; /* Ajusta a largura para ocupar o espaço disponível */
+}
+
+.tempo {
+    padding: 10px 30px;
+    color: white;
+    font-size: 14px;
+}
+
+.previa{
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: white;
+}
