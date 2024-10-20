@@ -5,6 +5,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -16,13 +17,18 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    height: 100px;
-    background-color: #051f20;
+    height: 90px;
+    background-color: #1b2727;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0; /* Coloca o cabeçalho no topo */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
 .logo img {
     max-height: 80px;
-    color:#d1d1d1;
+    color: #d1d1d1;
 }
 
 .opcoes-header {
@@ -30,7 +36,7 @@ header {
     gap: 20px;
 }
 
-.opcoes{
+.opcoes {
     text-decoration: none;
     color: #d1d1d1;
     font-size: 18px;
@@ -38,7 +44,11 @@ header {
 }
 
 .opcoes:hover {
-    color: #8eb69b;
+    color: #6b8e4e;
+}
+
+main {
+    margin-top: 100px; /* Adiciona margem superior para evitar que o conteúdo fique por baixo do cabeçalho */
 }
 
 .banner {
@@ -53,7 +63,7 @@ header {
     display: block;
 }
 
-.container_conteudo {
+.container_conteudo-1 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
@@ -61,13 +71,16 @@ header {
     padding: 20px;
     max-width: 1200px; /* Define uma largura máxima para a seção */
     margin: 0 auto; /* Centraliza a seção na tela */
+    margin-bottom: 50px;
+
 }
 
-.conteudo {
+.conteudo_container-1{
     background-color: transparent;
     display: flex;
     flex-direction: column;
     padding: 0;
+    padding-bottom: 10px;
 }
 
 .legenda-top {
@@ -75,7 +88,7 @@ header {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
-    background-color: #051f20;
+    background-color: #214430;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -101,27 +114,33 @@ header {
     color: #daf1de;
 }
 
-.conteudo img {
+.imagem-container1{
     width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.imagem-container1 :hover{
+    transform: scale(1.1);
 }
 
 .legenda-bottom {
     display: flex;
     justify-content: left;
-    padding: 5px;
-    background-color: #051f20;
+    padding: 5px 5px 0px 20px;
+    background-color: #214430;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    color: rgb(255, 255, 255);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    height: 50px;
 }
 
 .categorias a {
     font-size: 0.78em;
-    color: #527c5a;
+    color: #e0e2e1;
     text-decoration: none;
     margin: 1px;
 }
@@ -146,6 +165,26 @@ header {
     align-items: center;
     justify-content: center;
     font-size: 0.90em;
+}
+
+.botao_leia-agora-1{
+    height: 45px;
+    width: 110px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #b2c5b2;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.botao_leia-agora-1:hover {
+    background-color: #163832;
+    color: #ffffff;
+    transform: scale(1.07);
 }
 
 .carousel-container {
@@ -192,20 +231,40 @@ header {
     color: white;
 }
 
-.container-conteudo2 {
-    display: flex; /* Torna a section um contêiner flexível */
-    justify-content: space-between; /* Espaça as divs com espaço entre elas */
-    gap: 20px; /* Espaço entre os blocos */
-    flex-wrap: wrap; /* Faz com que as divs quebrem linha em telas menores */
-    padding: 20px; /* Espaçamento interno da section */
+.titulo-container-2{
+    margin-bottom: 30px;
 }
 
-.conteudo-bloco {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+.container_conteudo-2 {
+    padding: 20px; /* Espaçamento interno da section */
+    background-color: #dde0c4;
+    margin-bottom: 40px;
+
+}
+
+.titulo-container-2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 50px; /* Espaço abaixo do título */
+    color: #051f20;
+    font-size: 30px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.conteudos-wrapper {
+    display: flex; /* Torna as divs de conteúdo flexíveis */
+    justify-content: space-around; /* Espaça as divs com espaço entre elas */
+    gap: 20px; /* Espaço entre os blocos */
+    flex-wrap: wrap; /* Faz com que as divs quebrem linha em telas menores */
+}
+
+.conteudo_container-2 {
+    background-color: #214430;
     padding: 20px;
-    width: calc(45% - 1px); /* Define largura de 50%, menos o espaçamento */
+    margin-bottom: 50px;
+    width: calc(45% - 1px); /* Define largura de 45%, menos o espaçamento */
     box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .imagem-cont2 {
@@ -216,25 +275,32 @@ header {
 .legenda-conteudo2 {
     margin-top: 10px;
     font-size: 1rem;
-    color: #333;
+    color: #ffffff;
 }
 
-button {
+.botao_leia-agora-2 {
     margin-top: 10px;
+    margin-bottom: 10px;
     padding: 10px;
-    background-color: #8eb69b;
+    height: 45px;
+    width: 110px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: #b2c5b2;
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
-button:hover {
+.botao_leia-agora-2:hover {
     background-color: #163832;
     color: #daf1de;
+    transform: scale(1.07);
 }
 
+
 footer {
-    background-color: #333;
+    background-color: #1b2727;
     color: #fff;
     padding: 20px 0;
     text-align: center;
