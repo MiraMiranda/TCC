@@ -10,6 +10,7 @@
 body {
     font-family: 'Raleway', sans-serif;
     line-height: 1.5;
+    background-color: #dde0c4;
 }
 
 header {
@@ -194,6 +195,7 @@ header {
         margin-left: 20px; /* Reduz o espaçamento à esquerda */
         margin-right: 20px; /* Reduz o espaçamento à direita */
         max-height: 200px; /* Ajusta a altura máxima do anúncio */
+        position: static;
     }
 
     .container_conteudo {
