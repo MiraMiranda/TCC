@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Site de Noticias</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <header>
+        <div class="logo">
+            <img src="#" alt="LOGO DO SITE">
+        </div>
+
+        <nav class="opcoes-header">
+            <a href="#" class="opcoes">Home</a>
+            <a href="#"class="opcoes">Sobre</a>
+            <a href="#"class="opcoes">Categorias</a>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="https://i.ytimg.com/vi/hUo04TlPVRA/maxresdefault.jpg" alt="Banner principal" class="banner">
+    </div>
+    <section class="inicio">
+        <div class="carousel-container">
+            <!-- Imagens do Carousel -->
+            <div class="carousel-image active">
+                <img src="https://via.placeholder.com/800x400?text=Imagem+1" alt="Imagem 1">
+            </div>
+            <div class="carousel-image">
+                <img src="https://via.placeholder.com/800x400?text=Imagem+2" alt="Imagem 2">
+            </div>
+            <div class="carousel-image">
+                <img src="https://via.placeholder.com/800x400?text=Imagem+3" alt="Imagem 3">
+            </div>
+            <div class="carousel-image">
+                <img src="https://via.placeholder.com/800x400?text=Imagem+4" alt="Imagem 4">
+            </div>
+
+            <!-- Navegação numérica -->
+            <div class="carousel-navigation">
+                <button onclick="showImage(0)">1</button>
+                <button onclick="showImage(1)">2</button>
+                <button onclick="showImage(2)">3</button>
+                <button onclick="showImage(3)">4</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container_conteudo-1">
+        <!--Conteudo 1-->
+        <div class="conteudo_container-1">
+            <figure class="figu">
+                <div class="legenda-top">
+                    <a href="#">Você pode gostar</a>
+                    <div class="tempo">4 min de leitura</div>
+                </div>
+                <a href="https://blog.syngentadigital.ag/webserie-passos-da-transformacao/" class="mask">
+                    <img src="https://blog.plantei.com.br/wp-content/uploads/2015/09/como-plantar-cebolinha.jpg "alt="Cebolinha" class="imagem-container1">
+                </a>
+                <div class="legenda-bottom">
+                    <nav class="categorias">
+                        <a href="#">#categoria 1</a>
+                        <a href="#">#categoria 2</a>
+                        <a href="#">#categoria 3</a>
+                    </nav>
+                </div>
+                <div class="titulo">
+                    <h1>Cebolinha: O Temperinho Verde que Faz Toda a Diferença na Sua Cozinha</h1>
+                </div>
+                <div class="previa">
+                    A cebolinha é uma erva aromática popular <br> traz frescor e sabor aos pratos. Rica em vitaminas e
+                    minerais, ela é uma excelente adição à sua dieta, oferecendo benefícios como propriedades
+                    antioxidantes e anti-inflamatórias. Neste artigo, discutiremos as diferentes variedades de
+                    cebolinha, suas características nutricionais e como cultivá-la em casa. Aprenda dicas valiosas para
+                    manter sua cebolinha saudável e maximize seu uso na culinária, elevando o sabor de suas refeições
+                    diárias.
+                </div>
+                <div>
+                    <button class="botao_leia-agora-1">LEIA AGORA</button>
+                </div>
+            </figure>
+        </div>
+        <!--Conteudo 2-->
+        <div class="conteudo_container-1">
+            <figure class="figu">
+                <div class="legenda-top">
+                    <a href="#"> Hortaliças</a>
+                    <div class="tempo">4 min de leitura</div>
+                </div>
+                <a href="https://blog.syngentadigital.ag/webserie-passos-da-transformacao/" class="mask">
+                    <img src="https://blog.belagro.com.br/content/uploads/2022/01/plantar-alface-750x422.jpg"
+                        alt="Alface" class="imagem-container1">
+                </a>
+                <div class="legenda-bottom">
+                    <nav class="categorias">
+                        <a href="#">#categoria 1</a>
+                        <a href="#">#categoria 2</a>
+                        <a href="#">#categoria 3</a>
+                    </nav>
+                </div>
+                <div class="titulo">
+                    <h1>Alface: A Verdura Versátil e Rica em Nutrientes para Sua Horta Caseira</h1>
+                </div>
+                <div class="previa">
+                    Neste artigo, exploramos os benefícios da alface, uma das verduras mais populares e versáteis no
+                    cultivo doméstico. Discutiremos as variedades de alface, suas características nutricionais e os
+                    melhores métodos de plantio e cuidado.
+                </div>
+                <div>
+                    <button class="botao_leia-agora-1">LEIA AGORA</button>
+                </div>
+            </figure>
+        </div>
+        <!--Conteudo 3-->
+        <div class="conteudo_container-1">
+            <figure class="figu">
+                <div class="legenda-top">
+                    <a href="#">Recomendado</a>
+                    <div class="tempo">4 min de leitura</div>
+                </div>
+                <a href="https://blog.syngentadigital.ag/webserie-passos-da-transformacao/" class="mask">
+                    <img src="https://www.ecoagri.com.br/web/wp-content/uploads/plantar-agriao-scaled-1.jpg"
+                        alt="Agrião" class="imagem-container1">
+                </a>
+                <div class="legenda-bottom">
+                    <nav class="categorias">
+                        <a href="#">#categoria 1</a>
+                        <a href="#">#categoria 2</a>
+                        <a href="#">#categoria 3</a>
+                    </nav>
+                </div>
+                <div class="titulo">
+                    <h1>Agrião: Uma Verdura Refrescante e Nutriente para sua Horta Caseira</h1>
+                </div>
+                <div class="previa">
+                    O agrião é uma excelente opção para quem busca uma verdura refrescante e cheia de nutrientes. Neste
+                    artigo, vamos explorar suas propriedades e como cultivá-lo de forma simples em casa.
+                </div>
+                <div>
+                    <button class="botao_leia-agora-1"> LEIA AGORA</button>
+                </div>
+            </figure>
+        </div>
+    </section>
+
+    <section class="container_conteudo-2">
+        <div class="titulo-container-2">
+            <h1>IMPORTANTE</h1>
+        </div>
+        <div class="conteudos-wrapper"> <!-- Novo contêiner para as divs de conteúdo -->
+            <div class="conteudo_container-2">
+                <a href="#">
+                    <img src="https://via.placeholder.com/800x400?text=Imagem+1" alt="imagem 1" class="imagem-cont2">
+                </a>
+                <div class="legenda-conteudo2">
+                    Legenda do conteudo Legenda do conteudo Legenda do conteudo
+                </div>
+                <button class="botao_leia-agora-2">LEIA AGORA</button>
+            </div>
+            <div class="conteudo_container-2">
+                <a href="#">
+                    <img src="https://via.placeholder.com/800x400?text=Imagem+1" alt="imagem 1" class="imagem-cont2">
+                </a>
+                <div class="legenda-conteudo2">
+                    Legenda do conteudo Legenda do conteudo Legenda do conteudo
+                </div>
+                <button class="botao_leia-agora-2">LEIA AGORA</button>
+            </div>
+            <div class="conteudo_container-2">
+                <a href="#">
+                    <img src="https://via.placeholder.com/800x400?text=Imagem+1" alt="imagem 1" class="imagem-cont2">
+                </a>
+                <div class="legenda-conteudo2">
+                    Legenda do conteudo Legenda do conteudo Legenda do conteudo
+                </div>
+                <button class="botao_leia-agora-2">LEIA AGORA</button>
+            </div>
+            <div class="conteudo_container-2">
+                <a href="#">
+                    <img src="https://via.placeholder.com/800x400?text=Imagem+1" alt="imagem 1" class="imagem-cont2">
+                </a>
+                <div class="legenda-conteudo2">
+                    Legenda do conteudo Legenda do conteudo Legenda do conteudo
+                </div>
+                <button class="botao_leia-agora-2">LEIA AGORA</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+            <h4>Sobre</h4>
+            <p>Este site tem como objetivo fornecer dicas e informações sobre hortas urbanas e cultivo sustentável em espaços domésticos.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Desenvolvedores</h4>
+            <p>Desenvolvido por ... e ...</p>
+          </div>
+          <div class="footer-section">
+            <h4>Referências</h4>
+            <ul>
+              <li><a href="#">Artigos</a></li>
+              <li><a href="#">Livros</a></li>
+              <li><a href="#">Sites</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+</body>
+
+</html>
