@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+    background-color: #dde0c4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 90px; /* Ajuste se necessário */
+    background-color: #1b2727;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0; /* Coloca o cabeçalho no topo */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.logo img {
+    max-height: 80px;
+    color: #d1d1d1;
+}
+
+.opcoes-header {
+    display: flex;
+    gap: 20px;
+}
+
+.opcoes {
+    text-decoration: none;
+    color: #d1d1d1;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.opcoes:hover {
+    color: #6b8e4e;
+}
+
+.container_titulo-conteudo {
+    background-color: #214430;
+    margin-top: 90px; /* Adicione um espaçamento para compensar o header fixo */
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column; /* Coloca os itens em uma coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    padding: 20px;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .container_titulo-conteudo {
+        margin-top: 90px; /* Aumente a margem superior para dispositivos móveis */
+    }
+}
+
+.titulo-cabeçalho {
+    padding: 20px 30px;
+    color: white;
+    font-size: 20px;
+    width: 100%; /* Ajusta a largura para ocupar o espaço disponível */
+}
+
+.tempo {
+    padding: 10px 30px;
+    color: white;
+    font-size: 14px;
+}
+
+.previa {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.container_conteudo {
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    padding: 20px;
+}
+
+.anuncio-referencias {
+    flex: 0 0 270px; /* Define uma largura fixa menor para o anúncio */
+    background-color: #f4f4f4;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: sticky;
+    top: 20px;
+    margin-right: 100px; /* Espaçamento entre o anúncio e o conteúdo */
+    margin-left: 50px;
+    height: auto; /* Altura inicial automática */
+    max-height: 300px; /* Altura máxima de 400px */
+}
+
+.conteudo {
+    flex: 1;
+    max-width: 700px; /* Limita a largura do conteúdo */
+    padding-right: 20px; /* Adiciona espaço entre o texto e a borda direita */
+}
+
+.imagem-texto {
+    max-width: 100%; /* A imagem ocupa toda a largura possível */
+    height: auto;
+    margin-bottom: 35px;
+    margin-top: 20px;
+}
+
+.titulo-referencias {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.clique-aqui {
+    height: 45px;
+    width: 110px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 60px;
+    padding: 10px;
+    margin-left: 50px;
+    background-color: #163832;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.clique-aqui:hover {
+    background-color: #42b82b;
+    color: black;
+    transform: scale(1.07);
+}
+
+.paragrafo {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.titulo {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.legenda-imagem {
+    text-align: right; /* Alinha o texto à direita */
+    margin-top: -10px; /* Reduz a margem superior para aproximar da imagem */
+    margin-bottom: 20px; /* Ajuste a margem inferior conforme necessário */
+    font-size: 14px; /* Ajuste o tamanho da fonte se necessário */
+    color: #555; /* Defina uma cor que combine com o layout */
+}
+
+/* Estilos para telas pequenas (mobile) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Coloca os itens do cabeçalho em coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+        height: auto; /* Altura automática para cabeçalho */
+        padding: 10px; /* Reduz o padding */
+    }
+
+    .logo img {
+        max-height: 60px; /* Ajusta a altura da logo */
+    }
+
+    .opcoes-header {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row; /* Alinha as opções em coluna */
+        gap: 10px; /* Reduz o espaço entre opções */
+    }
+
+    .titulo-cabeçalho,
+    .tempo,
+    .previa {
+        padding: 10px; /* Ajusta o padding */
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+
+    .anuncio-referencias {
+        margin-left: 20px; /* Reduz o espaçamento à esquerda */
+        margin-right: 20px; /* Reduz o espaçamento à direita */
+        max-height: 200px; /* Ajusta a altura máxima do anúncio */
+        position: static;
+    }
+
+    .container_conteudo {
+        flex-direction: column; /* Coloca o conteúdo em coluna */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    .conteudo {
+        max-width: 100%; /* Largura total para conteúdo em mobile */
+        padding-right: 0; /* Remove o padding à direita */
+    }
+
+    .clique-aqui {
+        width: 100%; /* Botão ocupa toda a largura disponível */
+        margin-left: 0; /* Remove o margin-left */
+        margin-top: 20px; /* Adiciona margem superior */
+    }
+}
+
+/* Estilos para telas médias (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 0 30px; /* Aumenta o padding */
+    }
+
+    .opcoes-header {
+        gap: 15px; /* Ajusta o espaço entre opções */
+    }
+
+    .anuncio-referencias {
+        margin-left: 30px; /* Ajusta o margin para o anúncio */
+        margin-right: 30px;
+    }
+
+    .container_conteudo {
+        flex-direction: row; /* Mantém o layout em linha */
+        justify-content: space-between; /* Distribui espaço entre elementos */
+    }
+
+    .conteudo {
+        max-width: 80%; /* Limita a largura do conteúdo em tablets */
+    }
+}
+
+/* Estilos para telas grandes (desktop) */
+@media (min-width: 1025px) {
+    .container_conteudo {
+        flex-direction: row; /* Mantém o layout em linha */
+        justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    }
+
+    .conteudo {
+        max-width: 700px; /* Mantém a largura máxima do conteúdo */
+    }
+}
