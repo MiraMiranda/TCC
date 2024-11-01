@@ -114,7 +114,7 @@ header {
 
 .imagem-texto {
     max-width: 100%; /* A imagem ocupa toda a largura possível */
-    height: auto;
+    height: 500px;
     margin-bottom: 35px;
     margin-top: 20px;
 }
